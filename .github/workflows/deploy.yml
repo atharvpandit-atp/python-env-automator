@@ -41,6 +41,6 @@ jobs:
           docker pull ${{ secrets.DOCKERHUB_USERNAME }}/env-automator:latest
           docker run -d \
             --name env-automator-app \
-            -p 8501:8501 \
+            -p 80:8501 \
             ${{ secrets.DOCKERHUB_USERNAME }}/env-automator:latest
           docker image prune -f
