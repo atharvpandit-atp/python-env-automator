@@ -42,5 +42,6 @@ jobs:
           docker run -d \
             --name env-automator-app \
             -p 80:8501 \
+            -v /home/ec2-user/created_projects:/app/created_projects \
             ${{ secrets.DOCKERHUB_USERNAME }}/env-automator:latest
           docker image prune -f
